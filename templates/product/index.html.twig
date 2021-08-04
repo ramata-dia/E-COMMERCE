@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+
+{% block body %}
+
+</head>
+
+<body>
+
+
+
+<section id="hero">
+	<div class="hero-container">
+		<h3>Bienvenue à
+			<strong>KALIA</strong>
+		</h3>
+		
+		<h2> Votre Boutique  en Ligne : Le Marché Digital qui vous Facilite la vie</h2>
+		<a href="#about" class="btn-get-started scrollto">Commencer</a>
+	</div>
+</section>
+<!-- End Hero -->
+
+
+
+	
+</body></div><section id="about" class="about">
+
+<div class="row">
+
+	{% for product in products %}
+		<div class="col-4 mt-4">
+			<div class="border border-dark rounded p-2 clearfix">
+
+				<h2>
+					{{ product.title }}
+					-
+					{{ product.price }}
+
+
+					fr</h2><img class="img-fluid rounded" src="{{ asset('img/image/' ~ product.image )}}" alt="Image de {{ product.title }}"><hr>
+<a href="{{ path('cart_add',{'id': product.id})}}" class="btn btn-success">
+
+
+					<i class="fas fa-shopping-cart mr-1"></i>Ajouter
+				</a>
+			</div>
+		</div>
+
+
+	{% endfor %}
+</div></section>{% endblock %}

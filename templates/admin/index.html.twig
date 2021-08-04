@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!
+{% endblock %}
+
+
+
+	
+
+	
+
+
+	{% block body %}
+
+
+		<div class="container-fluid">
+			<h1>liste des produit</h1>
+
+			<div class="row mt-5">
+
+
+				<table class="table table-lg table-hover">
+
+					<thead>
+						<tr>
+							<th>title</th>
+							<th>price</th>
+							<th>disponiblite</th>
+							<th>Action</th>
+
+						</tr>
+
+					</thead>
+					<tbody>
+						{% for product in product %}
+							<tr>
+								<td class="text-break">{{product.title}}</td>
+
+								<td class="text-break">{{product.price}}</td>
+
+
+								<td class="text-break">{{product.image}}</td>
+
+								<td class="text-break">{{product.quantity}}</td>
+
+
+								
+                                <td class="text-break">
+									<a href="{{ path('admin_product', { id: product.id }) }}">
+										<span class="fa fa-pencil">
+											<i class=" far fa-trash-alt"></i>
+
+										</span>
+
+									</a>
+
+
+									<a href="{{ path('admin_edit', { id: product.id }) }}">
+										<span class="fa fa-pencil">
+											<i class="fas fa-edit"></i>
+
+										</span>
+
+									</a>
+
+								</td>
+							</tr>
+						{% endfor %}
+
+
+					</tbody>
+
+				</table>
+
+
+			</div>
+
+		</div>
+	
+
+
+{% endblock %}

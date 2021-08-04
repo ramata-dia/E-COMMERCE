@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+{% endblock %}
+
+
+{% block body %}
+	{% if items | length > 0 %}
+
+
+		<div class="container">
+			<div class="row mt-5">
+
+
+				<h3> Ajouter dans Votre panier des produits de qualités à des prix imbatable
+
+
+					<img src="{{asset('img/image/image3.jpg')}}" alt=""/>
+				
+				</h3>
+
+
+				<table class="table table-lg table-hover mt-5">
+
+					<thead>
+						<tr>
+							<th>Produit</th>
+							<th>Price</th>
+							<th>Quantity</th>
+							<th>Total</th>
+							<th>Action</th>
+
+
+						</tr>
+
+					</thead>
+					<tbody>
+						{% for item in items %}
+							<tr>
+								<td>{{item.product.title}}</td>
+								<td>{{item.product.price}}</td>
+								<td>{{item.quantity}}</td>
+								<td>{{item.product.price * item.quantity}}</td>
+
+
+								<td>
+									<a href="{{ path('cart_remove' ,{'id': item.product.id}) }}" class="btn btn-danger btn-sm">
+										<i class=" far fa-trash-alt"></i>
+									</td>
+								</td>
+							</tr>
+
+						{% endfor %}
+
+
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="3" class="text-right">Total :
+							</td>
+
+							<td>{{ total }}</td>
+
+						</tr>
+
+					</tfoot>
+
+
+				</table>
+			</div>
+		</div>
+
+
+	{% else %}
+		<p>Surprise  c'est vide !</p>
+
+
+	{% endif %}
+
+
+{% endblock %}

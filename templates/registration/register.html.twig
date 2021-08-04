@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+
+{% block body %}
+
+
+	<link
+	rel="stylesheet" type="text/css" href="{{asset('css/nunito-font.css')}}">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="{{asset('css/style1.css')}}"/>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url('img/image/form-v9.jpg')">
+<form class="form-detail" action="#" method="post">
+	<h2>Veuiller Remplir le Formulaire d'inscription</h2>
+
+			
+
+					{{ form_start(registrationForm) }}
+
+
+					<div class="form-row-total">
+
+
+						<div class="form-row ">
+							{{ form_row(registrationForm.nom, {
+                        input: 'nom' 
+                        
+
+
+					}
+					) }}
+
+						</div>
+						<div class="form-row">
+							{{ form_row(registrationForm.prenom) }}
+
+						</div>
+					</div>
+					<div class="form-row-total">
+						<div class="form-row">
+							{{ form_row(registrationForm.adresse) }}
+
+						</div>
+						<div class="form-row">
+							{{ form_row(registrationForm.email) }}
+
+						</div>
+					</div>
+
+					<div class="form-row-total ">
+						<div class="form-row">
+							{{ form_row(registrationForm.plainPassword, {
+                           label: 'Password'
+                            }) }}
+
+						</div>
+						<div class="form-row">
+							{{ form_row(registrationForm.date_naissance) }}
+
+						</div>
+					</div>
+<div class="form-row">
+	{{ form_row(registrationForm.agreeTerms) }}
+
+</div>
+
+
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register">
+					</div>
+{{ form_end(registrationForm) }}
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body></div></body><!-- This templates was made by Colorlib (https://colorlib.com) --></body></html>{% endblock %}

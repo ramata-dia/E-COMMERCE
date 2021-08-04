@@ -1,19 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+		{% block title %}
+		{% endblock %}
+
+		{# Run `composer require symfony/webpack-encore-bundle`
+																																																																																																																																																																												           and uncomment the following Encore helpers to start using Symfony UX #}
+		{% block stylesheets %}
+			{#{{ encore_entry_link_tags('app') }}#}
+			<!-- JavaScript Bundle with Popper -->
+
+
+			<!-- Favicons -->
+			<link href="{{asset('assets/img/favicon.png')}}" rel="icon"> <link
+			href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+			<!-- Google Fonts -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+			<link href="{{asset('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i')}}" rel="stylesheet">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+			<link rel="stylesheet" href="/css/bootstrap.min.css">
+			<link
+			rel="stylesheet" href="/css/style.css">
+
+
+			<!-- Vendor CSS Files -->
+			<link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+			<link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+			<link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+			<link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+			<link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+			<link
+			href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+			<!-- Template Main CSS File -->
+			<link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+			<script src="js/jquery.js"></script>
+			<script src="js/popper.min.js"></script>
+
+			<script src="js/bootstrap.min.js"></script>
+
+
+		{% endblock %}
+		<header id="header" class="fixed-top ">
+			<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+
+
+				<p class="logo">
+<img src="{{asset('img/image/image3.jpg')}}" alt="">
+
+					<a class="navbar-brand" href="#">KALIA</a>
+
+				</p>
+
+
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+
+				<ul>
+
+
+					<li>
+
+						<a class="nav-link scrollto " href="{{ path('blog') }}">Acceuil</a>
+					</li>
+
+
+					<li>
+
+						<a class="nav-link scrollto" href="{{ path('product_new') }}">Ajouter un Produit</a>
+					</li>
+
+
+					<li>
+
+						<a class="nav-link scrollto " href="{{ path('product') }}">Produit</a>
+					</li>
+
+
+					<li>
+
+
+						<a class="nav-link scrollto " href="{{ path('cart_index') }}">
+							<i class="fas fa-shopping-cart"></i>Panier</a>
+					</li>
+
+
+					<li class="dropdown">
+						<a href="#">
+							<span>Categorie</span>
+
+						</a>
+						<ul>
+							<li><a href="#">Produit cosmetique</a></li>
+							<li><a href="#">Vetement</a></li>
+							<li><a href="#">accessoire</a></li>
+							<li><a href="#">hijab</a></li>
+
+						</ul>
+					</li>
+
+
+				</ul>
+				<ul class=" navbar-nav ml-auto">
+					<li>
+
+						<a class="nav-link scrollto active" href="{{ path('app_login') }}">connexion</a>
+					</li>
+					<li class="nav-item">
+
+						<a class="nav-link scrollto active" href="{{ path('app_register') }}">Inscription</a>
+					</li>
+
+					<li>
+						<form class="d-flex ">
+
+							<input class="form-control me-sm-2" type="text" placeholder="Search">
+							<button class="btn btn-dark my-2 my-sm-0" type="submit">Rechercher</button>
+						</form>
+					</li>
+				</ul>
+			</li>
+
+
+		</nav>
+	</head>
+</html></div></head></html></head></html></div></head></html></head> </html></head></html></div></nav></header></head></html></head></html></div></head></html></head></html></header></head></html></head></html></head></html></head></html></head></html></div></header></head></html></head></head></html></header></body></head></html>{% block body %}{% endblock %}<footer id="footer"><div class="footer-top"><div class="container"><div class="row"><div class="col-lg-3 col-md-6 footer-contact"><h3>KALIA</h3></div><div class="container d-md-flex py-4"><div class="me-md-auto text-center text-md-start"><div class="copyright">&copy; Copyright<strong><span>KALIA</span></strong>. All Rights Reserved</div></div></div><!-- Vendor JS Files --><script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script><script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script><script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script><script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script><script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script><!-- Template Main JS File --><script

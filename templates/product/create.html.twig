@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+
+
+{% block title %}Bienvenue à kalia_shop
+
+{% endblock %}
+
+{% block body %}
+
+	<div class="container mt-5 w-50 h-50 bg-primary text-light ">
+
+		<div class="row mt-5">
+			<div class="col-12 col-md-8 col-lg-6 mx-auto">
+				{{ form_start(form) }}
+				{{ form_row(form.title, {'attr': {'placeholder': "contenue du titre"}})}}
+				{{ form_row(form.price, {'attr': {'placeholder': "contenue du prix"}})}}
+				{{ form_row(form.description, {'attr': {'placeholder': "contenue du titre"}})}}
+				{{ form_row(form.quantity, {'attr': {'placeholder': "contenue du prix"}})}}
+
+				{{ form_row(form.image)}}
+
+
+				{{ form_widget(form) }}
+
+			</div>
+		</div>
+
+
+		{{ form_end(form) }}
+
+
+	</div>
+
+
+{% endblock %}
